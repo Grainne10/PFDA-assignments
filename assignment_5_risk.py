@@ -28,68 +28,65 @@ def roll_dice(n):
 
 n_battle = 1000
 
-attacker_wins = 0
-defender_wins = 0
-
-attacker_wins_total = []  # Store total of attacker wins
-defender_wins_total = []  # Store total of defender wins
 
 
-for _ in range(n_battle):
-    # Attacker rolls 3 dice
-    attacker_rolls = np.sort(roll_dice(3))[::-1]  # Sort in descending order
-    # Defender rolls 2 dice
-    defender_rolls = np.sort(roll_dice(2))[::-1]  # Sort in descending order
-
+attacker_total = 0
+defender_total = 0
+tie_total = 0
+#Defn: Battle Round is a complete single dice roll comparison.
+#Defn: attacker/defender_wins is the number of times attacker/defender won a single die face-value comparison.
 # Simulate battle rounds
 for _ in range(n_battle):
+    attacker_wins = 0 #reset the wins to zero after each dice roll.
+    defender_wins = 0
     # Attacker rolls 3 dice
     attacker_rolls = np.sort(roll_dice(3))[::-1]  # Sort in descending order
     # Defender rolls 2 dice
     defender_rolls = np.sort(roll_dice(2))[::-1]  # Sort in descending order
-
-# Compare the highest rolls
-    if attacker_rolls[0] > defender_rolls[0]:
-        attacker_wins += 1
+    for i in range(2):
+        if attacker_rolls[i] > defender_rolls[i]:
+            attacker_wins += 1
+        else:
+            defender_wins += 1
+    if defender_wins & attacker_wins:
+        tie_total+=1
     else:
-        defender_wins += 1
-
-# Compare the second highest rolls
-    if attacker_rolls[1] > defender_rolls[1]:
-        attacker_wins += 1
-    else:
-        defender_wins += 1
-
+        if defender_wins == 0:
+            attacker_total+=1
+        else:
+            defender_total+=1
     
-# Total up each roll
-attacker_wins_total.append(attacker_wins)
-defender_wins_total.append(defender_wins)
+
+            
+   
+
+print(f"The number of Wins by Attacker : {attacker_total}")
+print(f"The number of Wins by Defender : {defender_total}")
+print(f"The number of draws : {tie_total}")
 
 
-print(f"The number of Wins by Attacker : {attacker_wins_total}")
-print(f"The number of Wins by Defender : {defender_wins_total}")
 
-
-if attacker_wins_total > defender_wins_total :
-    print("The Attacker Wins")
-elif defender_wins_total > attacker_wins_total :
-    print("The Defender Wins")
+if attacker_total > defender_total :
+    print("The Attacker won the most.")
+elif defender_total > attacker_total :
+    print("The Defender won the most.")
 else : 
-    print("The battle ended in a draw")
+    print("Neither won the most.")
 
 fig, ax = plt.subplots()
 
-ax.pie([attacker_wins, defender_wins], startangle=90 )
+ax.pie([attacker_total, defender_total, tie_total],colors=['Pink', 'cyan', 'skyblue'], startangle=90 )
 
 # Add individual win counts in the center of the pie chart
-plt.text(-0.5, 0.2, f'Attacker: {attacker_wins}', ha='center', fontsize=10, fontweight='bold')
-plt.text(0.5, -0.2, f'Defender: {defender_wins}', ha='center', fontsize=10, fontweight='bold')
+plt.text(-0.5, 0.2, f'Attacker: {attacker_total}', ha='center', fontsize=10, fontweight='bold')
+plt.text(0.25, -0.5, f'Defender: {defender_total}', ha='center', fontsize=10, fontweight='bold')
+plt.text(0.5, 0, f'Ties: {tie_total}', ha='center', fontsize=10, fontweight='bold')
 
 
 plt.axis('equal')  
 plt.title('Results of Battle ')
 
-
+plt.savefig("battle_results.png")
 
 plt.show()
 
