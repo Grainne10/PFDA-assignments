@@ -86,7 +86,8 @@ plt.text(0.5, 0, f'Ties: {tie_total}', ha='center', fontsize=10, fontweight='bol
 plt.axis('equal')  
 plt.title('Results of Battle ')
 
-plt.savefig("battle_results.png")
+
+plt.savefig(r'C:\Users\grain\Desktop\cmder\pands\PFDA-assignments\img\battle_results.png')
 
 plt.show()
 
