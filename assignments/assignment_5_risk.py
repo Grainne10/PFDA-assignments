@@ -7,8 +7,6 @@
 # The top two dice are compared, if the attackers dice is the same or lower, \
 # they lose one troop. If the defenders dice is the same or higher as the attackers,  the defender wins.
 
-### come back to this to total the battle rounds
-
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -82,13 +80,10 @@ plt.text(-0.5, 0.2, f'Attacker: {attacker_total}', ha='center', fontsize=10, fon
 plt.text(0.25, -0.5, f'Defender: {defender_total}', ha='center', fontsize=10, fontweight='bold')
 plt.text(0.5, 0, f'Ties: {tie_total}', ha='center', fontsize=10, fontweight='bold')
 
-
 plt.axis('equal')  
 plt.title('Results of Battle ')
 
-
-plt.savefig(r'C:\Users\grain\Desktop\cmder\pands\PFDA-assignments\img\battle_results.png')
-
+plt.savefig('../img/battle_results.png')
 plt.show()
 
 # matplotlib.figure.Figure(figsize=None, dpi=None, *, facecolor=None, edgecolor=None, linewidth=0.0, frameon=None, subplotpars=None, tight_layout=None, constrained_layout=None, layout=None, **kwargs)[source]
