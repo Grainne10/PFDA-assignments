@@ -47,19 +47,6 @@ The task requires the user to import, export and manipulate data. It shows how t
 
 
 
-
-
-
-
-Week 2 Weather
-Task 1
-Commit something to your repository. For this task I have set up my folders, I have started the readme document for my assignments and I am committing these to the repository.
-Task 2 
-Create a jupyter notebook that reads in a CSV file and create a plot of the temperature data over time.
-I will add my research notes to this
-
-
-
 ## Prerequisites
 - Python 3.x
 - Anaconda
