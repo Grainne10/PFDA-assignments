@@ -66,9 +66,16 @@ I found this task extremely difficult, I changed it several times before I found
 ### Task 5:
 
 #### Task Description: Weather
-The task involves simulating a series of individual battle rounds from the board game Risk, specifically the battle between an attacker with 3 dice and a defender with 2 dice. The goal is to simulate 1000 battle rounds and analyze the outcome.
-
+The task is to create a python file or notebook called assignment_6_Weather (.py or .ipynb) by importing a csv file and plotting the data. 
 #### Task Solution:
+
+The purpose of this task is to work with weather data and perform basic data analysis and visualization using Python. YOu will analyze temperature data by calculating daily and monthly averages.Learn how to load, manipulate, and analyze time series data from a CSV file. Analyze temperature trends over time, including calculating daily mean temperatures and monthly averages.Use time series plotting techniques to visualize temperature changes over time, including the daily and monthly mean temperatures. It is designed to help develop skills in handling real-world data, performing aggregation, and using libraries like Pandas and Matplotlib to generate informative visualizations. 
+
+I first pulled in the weather data from the provided URL using the Pandas library. I opened the file in Excel and identified the rows to skip. Afterward, I used pd.read_csv() to load the data, and selected only the relevant columns: "date", "temp", and "wdsp". Next, I converted the 'date' column into a proper datetime format using pd.to_datetime() to ensure that the dates were correctly parsed for time series analysis. I also renamed the columns to more readable names ("Date", "Temperature", "Wind Speed").
+For the temperature task, I aimed to analyze the temperature data over time and visualize trends by year. To begin, I extracted the year and month from the 'Date' column and created separate columns for each, which will be useful for future analysis and grouping.
+I added the 'year' and 'month' columns by using the .dt.year and .dt.month attributes of the Date column. This step makes it easier to group the data by year and month in future analyses.Next, I calculated the average temperature for each year by grouping the data by the 'year' column and then calculating the mean temperature for each group using groupby() and mean(). This aggregation allows me to focus on the yearly temperature trends without being overwhelmed by the daily fluctuations.
+Finally, I printed the first few rows of the dataset to verify the addition of the 'year' and 'month' columns. This step sets up the data for plotting the temperature trends over the years.
+
 
 
 
