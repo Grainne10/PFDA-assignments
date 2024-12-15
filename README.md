@@ -4,9 +4,9 @@
 
 **Contents:** 
 
-1. [Overview](#Ooverview)
+1. [Overview](#Overview)
 2. [Tasks](#Tasks)
-3. [Overview](#overview
+3. [Requirements](#Requirements)
 4. [Overview](#overview
 5. [Overview](#overview
 
@@ -83,12 +83,24 @@ In the mean monthly temperature task, I analyze the average monthly temperatures
 
 In the windspeed task, I checked for missing values in the dataset and found that there were some blank entries in the 'Wind Speed' column. I replaced the blank values with NaN and then removed all rows with missing data. Finally, I converted the 'Wind Speed' column to a numerical data type (float) for consistency in further analysis. Then, I calculated the average wind speed for each year by grouping the data by the 'year' column and computing the mean wind speed for each group. I created a plot to visualize the average wind speed over the years. The plot reveals a decline in wind speed from 2020 to 2024, which is notable because, during the same period, temperatures were rising.
 
+This task took up a lot of time and I found it difficult to resolve some of the tasks or find solutions on the web to create suitable plots.
+
+## Requirements  
+To install dependencies from a requirements.txt file:
+
+pip install -r requirements.txt
+
+## Data references
+* [CSV Files](https://realpython.com/courses/eading-and-writing-csv-files/) - how to read CSV files into program.
+* [Cleaning Data](https://www.w3schools.com/python/pandas/pandas_cleaning.asp) - cleaning data and removing missing values.
+* [Datetime](https://realpython.com/python-datetime/) - learned how to use and understand the datetime module.
+* [Stem Plots](https://matplotlib.org/stable/gallery/lines_bars_and_markers/stem_plot.html) - finding a suitable plot to visualise data)
+* [Annotations](https://www.geeksforgeeks.org/matplotlib-pyplot-annotate-in-python/) - understanding how to place annotations on a plot
+* [Strings](https://www.geeksforgeeks.org/string-manipulations-in-pandas-dataframe/) -  How to split a string so that I can isolate part of the string.
+* [Pieplots](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.pie.html) - plotting a pie plot using matplotlib
 
 
 
 
+ChatGPT - This was used to tidy up and make some improvements on plotting. The thoughts and ideas used in the file are my own but I did use chatgpt to improve wording README.
 
-## Prerequisites
-- Python 3.x
-- Anaconda
-- Visual Studio Code
