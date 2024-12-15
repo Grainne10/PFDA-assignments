@@ -7,8 +7,7 @@
 1. [Overview](#Overview)
 2. [Tasks](#Tasks)
 3. [Requirements](#Requirements)
-4. [Overview](#overview
-5. [Overview](#overview
+4. [References](#References)
 
 ## Overview
 
@@ -33,16 +32,21 @@ For this module, I created three repositories following the course guidelines:
 - `PFDA-mywork/`: Folder/Repository for additional work and exercises  
 - `PFDA-project/`: Folder/Repository for module project work  
  
- The objectives of this task were to familiarize students with GitHub repository creation, learn basic repository and folder management and understand the process of pushing work to GitHub.
+The objectives of this task were to familiarize students with GitHub repository creation, learn basic repository and folder management and understand the process of pushing work to GitHub.
 
 ### Task 2: Weather 
 
 #### Task Description:
-Read in a CSV file and create a jupyter notebook assignment2-weather.ipynb that has a nice plot of the temperature over time  
+Read in a CSV file and create a jupyter notebook assignment2-weather.ipynb that has a nice plot of the temperature over time.  
 
 #### Task Solution:
 
-The task requires the user to import, export and manipulate data. I show how to handle time data, how to clean and preprocess data and also create an informative visualisation. I imported the necessary libraries (pandas and matplotlib) and read the CSV file into a DataFrame. I created an excel file to view the data first and check if there was any missing data. The file weatherreadings1.csv contains time and temperature data, which I cleaned and prepare for visualization. I decided to use a stem plot as I thought it was a very clear visual which displayed the temperature (°C) on the y-axis and time on the x-axis. It showed the fluctuations in temperature over time, with annotations highlighting the highest and lowest temperatures.
+The task requires the user to import, export and manipulate data. I show how to handle time data, how to clean and preprocess data  
+and also create an informative visualisation. I imported the necessary libraries (pandas and matplotlib) and read the CSV file into a DataFrame.  
+I created an excel file to view the data first and check if there was any missing data. The file weatherreadings1.csv contains time and  
+temperature data, which I cleaned and prepare for visualization. I decided to use a stem plot as I thought it was a very clear visual which  
+displayed the temperature (°C) on the y-axis and time on the x-axis. It showed the fluctuations in temperature over time, with annotations  
+highlighting the highest and lowest temperatures.
 
 ### Task 3:
 
@@ -51,16 +55,35 @@ Create a notebook called assignment03-pie.ipynb. The note book should have a nic
 
 #### Task Solution:
 
-The task requires the user to create a Jupyter notebook that generates a visually appealing pie chart from a CSV file containing information about 1000 people. The focus of the task is on extracting and visualizing the email domains from this dataset. The dataset is available via a Google Drive link, and I read it into a dataframe using the url . I viewed the data in excel, there were no empty cells under the email domain.The dataset contains an "Email" column. I extracted the domain of each email by splitting the email string at the "@" symbol. This gives me the domain, which I stored in a new column called 'domain'.To visualize the distribution of email domains, I grouped the data by the 'domain' column and counted how many people have each domain. Using the matplotlib library, I created a pie chart of the domain counts. I added percentage annotations on each slice to provide more insight into the data.
+The task requires the user to create a Jupyter notebook that generates a visually appealing pie chart from a CSV file containing information   
+about 1000 people. The focus of the task is on extracting and visualizing the email domains from this dataset. The dataset is available via  
+a Google Drive link, and I read it into a dataframe using the url. I viewed the data in excel, there were no empty cells under the email domain.  
+The dataset contains an "Email" column. I extracted the domain of each email by splitting the email string at the "@" symbol. This gives me the   
+domain, which I stored in a new column called 'domain'.To visualize the distribution of email domains, I grouped the data by the 'domain' column  
+and counted how many people have each domain. Using the matplotlib library, I created a pie chart of the domain counts. I added percentage  
+annotations on each slice to provide more insight into the data.
 
 ### Task 4:
 
 #### Task Description: Risk
-The task involves simulating a series of individual battle rounds from the board game Risk, specifically the battle between an attacker with 3 dice and a defender with 2 dice. The goal is to simulate 1000 battle rounds and analyze the outcome.
+The task involves simulating a series of individual battle rounds from the board game Risk, specifically the battle between an attacker with 3 dice  
+and a defender with 2 dice. The goal is to simulate 1000 battle rounds and analyze the outcome.
 
 #### Task Solution:
-The program require the user to simulate random dice rolls for both the attacker and the defender. It helps you practice random number generation, conditional logic, iteration, and data visualization. By simulating many rounds, you can observe and analyze the distribution of troop losses for both sides in a Risk battle. 
-I used numpy for array manipulation and random number generation. I defined a standard 6-sided die and represemted the dice using a NumPy array, dice, containing values from 1 to 6. Then I used a function to simulate rolling the dice . It uses np.random.choice() to randomly select values from the dice array. I used n_battle = 1000 to set the number of battle rounds to simulate (1000 rounds). I used counters to track how many rounds the attacker wins, the defender wins, and how many rounds end in a tie. This loop runs 1000 times, simulating one battle round per iteration. Inside the loop, the variables attacker_wins and defender_wins are reset to 0 at the start of each round. In each battle round, the attacker rolls 3 dice and the defender rolls 2 dice, with both sets of rolls being sorted in descending order using np.sort() and then reversed to ensure the highest values are compared first. The code then checks if both the attacker and defender win at least one comparison, which would indicate a tie. If the defender doesn't win any comparisons, the attacker wins that round (attacker_total is incremented). Otherwise, the defender wins (defender_total is incremented).After all rounds are completed, the program prints the total number of wins for the attacker, defender, and ties. I visualised the data in a Pie Chart showings the proportion of wins for the attacker, defender, and ties. 
+The program require the user to simulate random dice rolls for both the attacker and the defender. It helps you practice random number  
+generation, conditional logic, iteration, and data visualization. By simulating many rounds, you can observe and analyze the distribution  
+of troop losses for both sides in a Risk battle. 
+I used numpy for array manipulation and random number generation. I defined a standard 6-sided die and represented the dice using a   
+NumPy array, dice, containing values from 1 to 6. Then I used a function to simulate rolling the dice . It uses np.random.choice()  
+to randomly select values from the dice array. I used n_battle = 1000 to set the number of battle rounds to simulate (1000 rounds).  
+I used counters to track how many rounds the attacker wins, the defender wins, and how many rounds end in a tie. This loop runs 1000 times,  
+simulating one battle round per iteration. Inside the loop, the variables attacker_wins and defender_wins are reset to 0 at the start of  
+each round. In each battle round, the attacker rolls 3 dice and the defender rolls 2 dice, with both sets of rolls being sorted in  descending  
+order using np.sort() and then reversed to ensure the highest values are compared first. The code then checks if both the attacker and defender  
+win at least one comparison, which would indicate a tie. If the defender doesn't win any comparisons, the attacker wins that round (attacker_total  
+is incremented). Otherwise, the defender wins (defender_total is incremented).After all rounds are completed, the program prints the total number  
+of wins for the attacker, defender, and ties. I visualised the data in a Pie Chart showings the proportion of wins for the attacker, defender,  
+and ties. 
 I found this task extremely difficult, I changed it several times before I found a solution that worked correctly and calculated only 1000 rounds.
 
 ### Task 5:
@@ -90,17 +113,16 @@ To install dependencies from a requirements.txt file:
 
 pip install -r requirements.txt
 
-## Data references
+## References
 * [CSV Files](https://realpython.com/courses/eading-and-writing-csv-files/) - how to read CSV files into program.
 * [Cleaning Data](https://www.w3schools.com/python/pandas/pandas_cleaning.asp) - cleaning data and removing missing values.
 * [Datetime](https://realpython.com/python-datetime/) - learned how to use and understand the datetime module.
 * [Stem Plots](https://matplotlib.org/stable/gallery/lines_bars_and_markers/stem_plot.html) - finding a suitable plot to visualise data)
 * [Annotations](https://www.geeksforgeeks.org/matplotlib-pyplot-annotate-in-python/) - understanding how to place annotations on a plot
 * [Strings](https://www.geeksforgeeks.org/string-manipulations-in-pandas-dataframe/) -  How to split a string so that I can isolate part of the string.
-* [Pieplots](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.pie.html) - plotting a pie plot using matplotlib
-
-
-
-
-ChatGPT - This was used to tidy up and make some improvements on plotting. The thoughts and ideas used in the file are my own but I did use chatgpt to improve wording README.
+* [Pieplots](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.pie.html) - plotting a pie plot using matplotlib.
+* [Random choice](https://www.geeksforgeeks.org/numpy-random-choice-in-python/) - random samples from an array, using it to randomly select values from the dice array.
+* [Numpy array](https://stackoverflow.com/questions/26984414/efficiently-sorting-a-numpy-array-in-descending-order) - sorting the array in descending order.
+* [Loop statements](https://stackoverflow.com/questions/42522892/how-to-add-up-wins-ties-losses-using-returns-in-a-game-rock-paper-scissors) - how you might use conditional statements in games.
+* ChatGPT - This was used to tidy up and make some improvements on plotting. The thoughts and ideas used in the file are my own but I did use chatgpt to improve wording README.
 
