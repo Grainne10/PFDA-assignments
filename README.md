@@ -41,8 +41,7 @@ Read in a CSV file and create a jupyter notebook assignment2-weather.ipynb that 
 
 #### Task Solution:
 
-The task requires the user to import, export and manipulate data. I show how to handle time data, how to clean and preprocess data  
-and also create an informative visualisation. I imported the necessary libraries (pandas and matplotlib) and read the CSV file into a DataFrame.  
+The task requires the user to import, export and manipulate data. I show how to handle time data, how to clean and preprocess data and also create an informative visualisation. I imported the necessary libraries (pandas and matplotlib) and read the CSV file into a DataFrame.  
 I created an excel file to view the data first and check if there was any missing data. The file weatherreadings1.csv contains time and  
 temperature data, which I cleaned and prepare for visualization. I decided to use a stem plot as I thought it was a very clear visual which  
 displayed the temperature (°C) on the y-axis and time on the x-axis. It showed the fluctuations in temperature over time, with annotations  
@@ -59,31 +58,18 @@ The task requires the user to create a Jupyter notebook that generates a visuall
 about 1000 people. The focus of the task is on extracting and visualizing the email domains from this dataset. The dataset is available via  
 a Google Drive link, and I read it into a dataframe using the url. I viewed the data in excel, there were no empty cells under the email domain.  
 The dataset contains an "Email" column. I extracted the domain of each email by splitting the email string at the "@" symbol. This gives me the   
-domain, which I stored in a new column called 'domain'.To visualize the distribution of email domains, I grouped the data by the 'domain' column  
-and counted how many people have each domain. Using the matplotlib library, I created a pie chart of the domain counts. I added percentage  
-annotations on each slice to provide more insight into the data.
+domain, which I stored in a new column called 'domain'.To visualize the distribution of email domains, I grouped the data by the 'domain' column and counted how many people have each domain. Using the matplotlib library, I created a pie chart of the domain counts. I added percentage  annotations on each slice to provide more insight into the data.
 
 ### Task 4:
 
 #### Task Description: Risk
-The task involves simulating a series of individual battle rounds from the board game Risk, specifically the battle between an attacker with 3 dice  
-and a defender with 2 dice. The goal is to simulate 1000 battle rounds and analyze the outcome.
+The task involves simulating a series of individual battle rounds from the board game Risk, specifically the battle between an attacker with 3 dice and a defender with 2 dice. The goal is to simulate 1000 battle rounds and analyze the outcome.
 
 #### Task Solution:
 The program require the user to simulate random dice rolls for both the attacker and the defender. It helps you practice random number  
 generation, conditional logic, iteration, and data visualization. By simulating many rounds, you can observe and analyze the distribution  
 of troop losses for both sides in a Risk battle. 
-I used numpy for array manipulation and random number generation. I defined a standard 6-sided die and represented the dice using a   
-NumPy array, dice, containing values from 1 to 6. Then I used a function to simulate rolling the dice . It uses np.random.choice()  
-to randomly select values from the dice array. I used n_battle = 1000 to set the number of battle rounds to simulate (1000 rounds).  
-I used counters to track how many rounds the attacker wins, the defender wins, and how many rounds end in a tie. This loop runs 1000 times,  
-simulating one battle round per iteration. Inside the loop, the variables attacker_wins and defender_wins are reset to 0 at the start of  
-each round. In each battle round, the attacker rolls 3 dice and the defender rolls 2 dice, with both sets of rolls being sorted in  descending  
-order using np.sort() and then reversed to ensure the highest values are compared first. The code then checks if both the attacker and defender  
-win at least one comparison, which would indicate a tie. If the defender doesn't win any comparisons, the attacker wins that round (attacker_total  
-is incremented). Otherwise, the defender wins (defender_total is incremented).After all rounds are completed, the program prints the total number  
-of wins for the attacker, defender, and ties. I visualised the data in a Pie Chart showings the proportion of wins for the attacker, defender,  
-and ties. 
+I used numpy for array manipulation and random number generation. I defined a standard 6-sided die and represented the dice using a NumPy array, dice, containing values from 1 to 6. Then I used a function to simulate rolling the dice . It uses np.random.choice() to randomly select values from the dice array. I used n_battle = 1000 to set the number of battle rounds to simulate (1000 rounds).  I used counters to track how many rounds the attacker wins, the defender wins, and how many rounds end in a tie. This loop runs 1000 times, simulating one battle round per iteration. Inside the loop, the variables attacker_wins and defender_wins are reset to 0 at the start of each round. In each battle round, the attacker rolls 3 dice and the defender rolls 2 dice, with both sets of rolls being sorted in  descending order using np.sort() and then reversed to ensure the highest values are compared first. The code then checks if both the attacker and defender win at least one comparison, which would indicate a tie. If the defender doesn't win any comparisons, the attacker wins that round (attacker_total is incremented). Otherwise, the defender wins (defender_total is incremented).After all rounds are completed, the program prints the total number of wins for the attacker, defender, and ties. I visualised the data in a Pie Chart showings the proportion of wins for the attacker, defender, and ties. 
 I found this task extremely difficult, I changed it several times before I found a solution that worked correctly and calculated only 1000 rounds.
 
 ### Task 5:
@@ -125,6 +111,5 @@ To review the dependencies please review the requirements.txt file.
 * [Loop statements](https://stackoverflow.com/questions/42522892/how-to-add-up-wins-ties-losses-using-returns-in-a-game-rock-paper-scissors) - how you might use conditional statements in games.
 * ChatGPT - This was used to tidy up and make some improvements on plotting. The thoughts and ideas used in the file are my own but I did use chatgpt to improve wording README.
 * [Dice Simulation](https://github.com/Ryota-Kawamura/Mathematics-for-Machine-Learning-and-Data-Science-Specialization/blob/main/Course-3/Week-2/C3_W2_Lab_2_Dice_Simulations.ipynb) - learning how to do a simulation of rolling dice
-*[Numpy Arrays](https://www.geeksforgeeks.org/how-to-get-the-n-largest-values-of-an-array-using-numpy/)
-*[Pie Charts](https://matplotlib.org/stable/gallery/pie_and_polar_charts/pie_features.html)
-
+* [Numpy Arrays](https://www.geeksforgeeks.org/how-to-get-the-n-largest-values-of-an-array-using-numpy/) - finding the highest values of arrays
+* [Pie Charts](https://matplotlib.org/stable/gallery/pie_and_polar_charts/pie_features.html) - versions of pie charts and features
