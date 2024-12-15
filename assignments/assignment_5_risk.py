@@ -89,11 +89,3 @@ plt.show()
 # matplotlib.figure.Figure(figsize=None, dpi=None, *, facecolor=None, edgecolor=None, linewidth=0.0, frameon=None, subplotpars=None, tight_layout=None, constrained_layout=None, layout=None, **kwargs)[source]
 
 
-
-
-# Research:
-
-# https://github.com/Ryota-Kawamura/Mathematics-for-Machine-Learning-and-Data-Science-Specialization/blob/main/Course-3/Week-2/C3_W2_Lab_2_Dice_Simulations.ipynb
-# https://www.geeksforgeeks.org/how-to-get-the-n-largest-values-of-an-array-using-numpy/
-# https://matplotlib.org/stable/gallery/pie_and_polar_charts/pie_features.html
-

@@ -109,9 +109,8 @@ In the windspeed task, I checked for missing values in the dataset and found tha
 This task took up a lot of time and I found it difficult to resolve some of the tasks or find solutions on the web to create suitable plots.
 
 ## Requirements  
-To install dependencies from a requirements.txt file:
+To review the dependencies please review the requirements.txt file.
 
-pip install -r requirements.txt
 
 ## References
 * [CSV Files](https://realpython.com/courses/eading-and-writing-csv-files/) - how to read CSV files into program.
@@ -125,4 +124,7 @@ pip install -r requirements.txt
 * [Numpy array](https://stackoverflow.com/questions/26984414/efficiently-sorting-a-numpy-array-in-descending-order) - sorting the array in descending order.
 * [Loop statements](https://stackoverflow.com/questions/42522892/how-to-add-up-wins-ties-losses-using-returns-in-a-game-rock-paper-scissors) - how you might use conditional statements in games.
 * ChatGPT - This was used to tidy up and make some improvements on plotting. The thoughts and ideas used in the file are my own but I did use chatgpt to improve wording README.
+* [Dice Simulation](https://github.com/Ryota-Kawamura/Mathematics-for-Machine-Learning-and-Data-Science-Specialization/blob/main/Course-3/Week-2/C3_W2_Lab_2_Dice_Simulations.ipynb) - learning how to do a simulation of rolling dice
+*[Numpy Arrays](https://www.geeksforgeeks.org/how-to-get-the-n-largest-values-of-an-array-using-numpy/)
+*[Pie Charts](https://matplotlib.org/stable/gallery/pie_and_polar_charts/pie_features.html)
 
